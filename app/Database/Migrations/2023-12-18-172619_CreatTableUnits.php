@@ -25,7 +25,7 @@ class CreatTableUnits extends Migration
             'constraint' => 255,
         ],
         'phone' => [
-            'type' => 'INT',
+            'type' => 'VARCHAR',
             'constraint' => 14,
             'comment' => '(99)99999-9999',
             

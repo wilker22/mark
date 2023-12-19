@@ -26,3 +26,15 @@ Stack trace:
 #8 C:\xampp\htdocs\mark\system\CLI\Console.php(46): CodeIgniter\CLI\Commands->run('migrate', Array)
 #9 C:\xampp\htdocs\mark\spark(102): CodeIgniter\CLI\Console->run()
 #10 {main}
+CRITICAL - 2023-12-18 19:43:54 --> Undefined variable $units
+in APPPATH\Views\Back\Units\index.php on line 53.
+ 1 APPPATH\Views\Back\Units\index.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $units', 'C:\\xampp\\htdocs\\mark\\app\\Views\\Back\\Units\\index.php', 53)
+ 2 SYSTEMPATH\View\View.php(228): include('C:\\xampp\\htdocs\\mark\\app\\Views\\Back\\Units\\index.php')
+ 3 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Back/Units/index', [], true)
+ 5 APPPATH\Controllers\Super\UnitsController.php(15): view('Back/Units/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Super\UnitsController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Super\UnitsController))
+ 8 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs\\mark\\public\\index.php')
