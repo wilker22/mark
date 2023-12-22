@@ -1,0 +1,18 @@
+CRITICAL - 2023-12-19 18:21:55 --> Unmatched '}'
+in APPPATH\Views\Back\Units\index.php on line 70.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Back/Units/index', [], true)
+ 3 APPPATH\Controllers\Super\UnitsController.php(18): view('Back/Units/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Super\UnitsController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Super\UnitsController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-12-19 18:22:16 --> syntax error, unexpected end of file
+in APPPATH\Views\Back\Units\index.php on line 103.
+ 1 SYSTEMPATH\View\View.php(231): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1190): CodeIgniter\View\View->render('Back/Units/index', [], true)
+ 3 APPPATH\Controllers\Super\UnitsController.php(18): view('Back/Units/index', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(942): App\Controllers\Super\UnitsController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(502): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Super\UnitsController))
+ 6 SYSTEMPATH\CodeIgniter.php(361): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
