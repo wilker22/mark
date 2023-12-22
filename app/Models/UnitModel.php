@@ -42,10 +42,17 @@ class UnitModel extends Model
     protected $beforeDelete   = [];
     protected $afterDelete    = [];
 
+<<<<<<< HEAD
 
     public function findOrFail(int|string $id) : object {
         $row = $this->find($id);
 
         return $row ?? throw new PageNotFoundException("Registro {$id} não encontrado!");
+=======
+    public function findOrFail(int|string $id) : object
+    {
+        $row = $this->find($id);
+        return $row ?? throw new PageNotFoundException("Registro ($id) nao encontrado");
+>>>>>>> 7fdaa5646703ae882f582af77ceecba6e014f57f
     }
 }

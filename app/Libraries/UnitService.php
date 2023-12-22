@@ -9,7 +9,10 @@ use CodeIgniter\Config\Factories;
 
 class UnitService extends MyBaseService
 {
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7fdaa5646703ae882f582af77ceecba6e014f57f
     private static array $serviceTimes = [
         '10 minutes' => '10 minutos',
         '15 minutes' => '15 minutos',
@@ -36,9 +39,15 @@ class UnitService extends MyBaseService
             return self::TEXT_FOR_NO_DATA;
         }
 
+<<<<<<< HEAD
         $this->htmlTable->setHeading('Ações', 'Nome', 'E-mail', 'Telefone', 'Serviços', 'Situação', 'Criado');
 
         $unitServiceService = Factories::class(UnitServiceService::class);
+=======
+        $this->htmlTable->setHeading('Acoes', 'Nome', 'E-mail', 'Telefone', 'Situação', 'Criado');
+
+        //$unitServiceService = Factories::class(UnitServiceService::class);
+>>>>>>> 7fdaa5646703ae882f582af77ceecba6e014f57f
 
         foreach ($units as $unit) {
 
@@ -48,9 +57,15 @@ class UnitService extends MyBaseService
                     $unit->name,
                     $unit->email,
                     $unit->phone,
+<<<<<<< HEAD
                     $unitServiceService->renderUnitServices($unit->services),
                     $unit->status(),
                     $unit->createdAt(),
+=======
+                    //          $unitServiceService->renderUnitServices($unit->services),
+                    $unit->active,
+                    $unit->created_at,
+>>>>>>> 7fdaa5646703ae882f582af77ceecba6e014f57f
                 ]
             );
         }
@@ -65,7 +80,11 @@ class UnitService extends MyBaseService
      * @param string|null $serviceTime intervalo já associado ao registro, quando for o caso.
      * @return string
      */
+<<<<<<< HEAD
     public function renderTimesInterval(?string $serviceTime = null): string
+=======
+    /* public function renderTimesInterval(?string $serviceTime = null): string
+>>>>>>> 7fdaa5646703ae882f582af77ceecba6e014f57f
     {
 
         $options = [];
@@ -78,7 +97,11 @@ class UnitService extends MyBaseService
 
 
         return form_dropdown(data: 'servicetime', options: $options, selected: old('servicetime', $serviceTime), extra: ['class' => 'form-control']);
+<<<<<<< HEAD
     }
+=======
+    }*/
+>>>>>>> 7fdaa5646703ae882f582af77ceecba6e014f57f
 
 
     /**
@@ -87,10 +110,17 @@ class UnitService extends MyBaseService
      * @param integer|string $unitId
      * @return string
      */
+<<<<<<< HEAD
     public function renderUnitSchedules(int|string $unitId): string
     {
         // buscamos os agendamentos
         $schedules = model(ScheduleModel::class)->getUnitSchedules($unitId);
+=======
+    /* public function renderUnitSchedules(int|string $unitId): string
+    {
+        // buscamos os agendamentos
+        //$schedules = model(ScheduleModel::class)->getUnitSchedules($unitId);
+>>>>>>> 7fdaa5646703ae882f582af77ceecba6e014f57f
 
         if (empty($schedules)) {
 
@@ -114,7 +144,11 @@ class UnitService extends MyBaseService
 
         // retorno a lista HTML 
         return ul($list);
+<<<<<<< HEAD
     }
+=======
+    }*/
+>>>>>>> 7fdaa5646703ae882f582af77ceecba6e014f57f
 
 
     /**
@@ -137,12 +171,21 @@ class UnitService extends MyBaseService
         $btnActions .= anchor(route_to('units.edit', $unit->id), 'Editar', ['class' => 'dropdown-item']);
         $btnActions .= anchor(route_to('units.services', $unit->id), 'Serviços', ['class' => 'dropdown-item']);
         $btnActions .= anchor(route_to('units.schedules', $unit->id), 'Agendamentos', ['class' => 'dropdown-item']);
+<<<<<<< HEAD
         $btnActions .= view_cell(
             library: 'ButtonsCell::action',
             params: [
                 'route'       => route_to('units.action', $unit->id),
                 'text_action' => $unit->textToAction(),
                 'activated'   => $unit->isActivated(),
+=======
+        /*$btnActions .= view_cell(
+            library: 'ButtonsCell::action',
+            params: [
+                'route'       => route_to('units.action', $unit->id),
+                //'text_action' => $unit->textToAction(),
+                //'activated'   => $unit->isActivated(),
+>>>>>>> 7fdaa5646703ae882f582af77ceecba6e014f57f
                 'btn_class'   => 'dropdown-item py-2'
             ]
         );
@@ -152,7 +195,11 @@ class UnitService extends MyBaseService
                 'route'       => route_to('units.destroy', $unit->id),
                 'btn_class'   => 'dropdown-item py-2'
             ]
+<<<<<<< HEAD
         );
+=======
+        );*/
+>>>>>>> 7fdaa5646703ae882f582af77ceecba6e014f57f
 
         $btnActions .= ' </div>
                         </div>';
